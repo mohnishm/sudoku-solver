@@ -9,8 +9,8 @@ router.get('/board', (req, res) => {
 
 router.post('/solve', (req,res) => {
     try{
-        if (req.body && req.body.sudoku) {
-            sudokuSolver(req.body.sudoku).then(result => {
+        if (req.body && req.body.data) {
+            sudokuSolver(req.body.data).then(result => {
                 let message = result[0].includes(0) ? "Sudoku not solved" : "Sudoku solved successfully";
                 res.status(200);
                 res.send({ message: message, result: result });
