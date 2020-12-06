@@ -1,6 +1,8 @@
 const express = require('express');
 const board = require('../helperFunctions/sudokuBoard.js');
 const sudokuSolver = require('../helperFunctions/sudokuSolver.js');
+const sudokuTester = require('../helperFunctions/sudokuTester.js');
+
 const router = express.Router();
 
 router.get('/board', (req, res) => {

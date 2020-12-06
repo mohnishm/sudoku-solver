@@ -21,7 +21,7 @@ class App extends React.Component {
     axios.post('http://localhost:8000/sudoku/api/solve', { data: this.state.board })
     .then(res => {
       console.log(res.status);
-      this.setState({ board: res.data.result})
+      this.setState({ board: res.data.result});
     })
   }
 
